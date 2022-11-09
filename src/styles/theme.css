@@ -1,0 +1,19 @@
+[data-theme='light'] {
+	--color-primary: theme('colors.rose.400');
+	--color-secondary: theme('colors.orange.800');
+	--color-text: theme('colors.slate.900');
+	--color-text-offset: theme('colors.slate.600');
+	--color-background: theme('colors.slate.50');
+	--color-background-offset: theme('colors.slate.100');
+	--color-border: theme('colors.slate.900' / 10%);
+}
+
+[data-theme='dark'] {
+	--color-primary: theme('colors.rose.300');
+	--color-secondary: theme('colors.orange.200');
+	--color-text: theme('colors.slate.50');
+	--color-text-offset: theme('colors.slate.400');
+	--color-background: theme('colors.slate.900');
+	--color-background-offset: theme('colors.slate.800');
+	--color-border: theme('colors.slate.50' / 10%);
+}
