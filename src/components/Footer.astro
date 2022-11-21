@@ -1,13 +1,50 @@
 ---
+import { Icon } from 'astro-icon';
+import type { FooterLink } from '../types';
 const today = new Date();
+const links: Array<FooterLink> = [
+	{
+		url: 'mailto:zhijun.low@gmail.com',
+		description: 'Jun email',
+		icon: 'platforms/mail',
+	},
+	{
+		url: 'https://github.com/jun-low',
+		description: 'Jun on GitHub',
+		icon: 'platforms/github',
+	},
+	{
+		url: 'https://dev.to/junlow',
+		description: 'Jun on Dev.to',
+		icon: 'platforms/dev',
+	},
+	{
+		url: 'https://www.linkedin.com/in/jun-low/',
+		description: 'Jun on LinkedIn',
+		icon: 'platforms/linkedin',
+	},
+	{
+		url: 'https://twitter.com/_junlow',
+		description: 'Jun on Twitter',
+		icon: 'platforms/twitter',
+	},
+];
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="relative py-10">
+	<ul class="relative flex items-center justify-center">
+		{
+			links.map((link) => (
+				<li>
+					<a class="flex items-center justify-center w-16 h-16 p-4" href={link.url}>
+						<span class="sr-only">{link.description}</span>
+						<Icon class="h-full" name={link.icon} />
+					</a>
+				</li>
+			))
+		}
+	</ul>
+	<p class="text-xs text-center italic">
+		&copy; {today.getFullYear()} Jun Low. All rights reserved.
+	</p>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>

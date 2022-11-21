@@ -1,25 +1,114 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+import { Icon } from 'astro-icon';
+import HeaderLink from '@components/header-link.astro';
+import ThemeSwitcher from '@components/theme-switcher.astro';
 import { SITE_TITLE } from '../config';
+import { Picture } from '@astrojs/image/components';
+import logoImage from '../assets/logo.png';
+const widths = [450, 800, 1200];
+const sizes = '100vw';
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header
+	id="page-header"
+	class="absolute bottom-0 z-20 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
+>
+	<a class="flex items-center gap-3 hover:!text-default" href="#">
+		<h1 class="sr-only">{SITE_TITLE}</h1>
+		<!-- <Icon name="logo" class="h-10" /> -->
+		<Picture
+			class="object-cover hidden h-16 sm:block"
+			src={logoImage}
+			widths={widths}
+			sizes={sizes}
+			alt="Logo of jun low"
+		/>
+	</a>
+	<div>
+		<div class="flex items-center gap-6">
+			<nav class="hidden sm:block">
+				<div class="flex items-center gap-6">
+					<HeaderLink href="/" class="text-sm">Home</HeaderLink>
+					<HeaderLink href="#about" class="text-sm">About</HeaderLink>
+					<HeaderLink href="#work" class="text-sm">Work</HeaderLink>
+				</div>
+			</nav>
+			<button id="open-nav-button" type="button" class="btn sm:hidden" aria-label="Navigation">
+				<Icon name="menu" class="h-8" />
+			</button>
+			<ThemeSwitcher />
+		</div>
+		<div id="menu-modal" class="hidden modal" aria-hidden="true">
+			<div class="fixed inset-0 px-8 py-4 bg-default text-default">
+				<div class="space-y-4" role="dialog" aria-modal="true">
+					<header class="text-right">
+						<button id="close-nav-button" type="button" class="btn" aria-label="Close navigation">
+							<Icon name="cross" class="h-8" />
+						</button>
+					</header>
+					<div class="flex justify-center">
+						<Icon name="logo" class="h-16" />
+					</div>
+					<nav>
+						<div class="flex flex-col">
+							<HeaderLink href="/" class="block py-4 text-xl text-center">Home</HeaderLink>
+							<HeaderLink href="#about" class="block py-4 text-xl text-center">About</HeaderLink>
+							<HeaderLink href="#work" class="block py-4 text-xl text-center">Work</HeaderLink>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
+
+<script>
+	import MicroModal from 'micromodal';
+	import invariant from 'tiny-invariant';
+
+	const menuModalId = 'menu-modal';
+	const header = document.querySelector('#page-header') as HTMLElement;
+	const page = document.documentElement;
+	const menu = document.querySelector(`#${menuModalId} div`);
+	const openNavButton = document.querySelector('#open-nav-button');
+	const closeNavButton = document.querySelector('#close-nav-button');
+	invariant(header, 'header should not be null');
+	invariant(menu, 'menu should not be null');
+	invariant(openNavButton, 'openNavButton should not be null');
+	invariant(closeNavButton, 'closeNavButton should not be null');
+	const openMenu = () => {
+		MicroModal.show(menuModalId, { disableScroll: true });
+	};
+	const closeMenu = () => {
+		MicroModal.close(menuModalId);
+	};
+	openNavButton.addEventListener('click', openMenu);
+	closeNavButton.addEventListener('click', closeMenu);
+	document.addEventListener('scroll', () => {
+		const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+		header.classList.toggle('fixed-header', d < 0);
+	});
+	menu.addEventListener('click', (event) => {
+		if ((event.target as HTMLElement).tagName === 'A') {
+			closeMenu();
+		}
+	});
+</script>
+
+<noscript>
+	<style>
+		#open-nav-button {
+			display: none;
+		}
+	</style>
+</noscript>
+
 <style>
-	header {
-		margin: 0em 0 2em;
+	.fixed-header {
+		@apply fixed top-0 bottom-auto;
+		@apply text-default bg-default border-default;
 	}
-	h2 {
-		margin: 0.5em 0;
+	.modal.is-open {
+		@apply block;
 	}
 </style>

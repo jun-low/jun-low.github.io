@@ -6,8 +6,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Fira Sans', ...defaultTheme.fontFamily.sans],
-				serif: ['Cormorant Upright', ...defaultTheme.fontFamily.serif],
+				display: ['Lovelace-text', ...defaultTheme.fontFamily.serif],
+				sans: ['Bellefair Regular', ...defaultTheme.fontFamily.sans],
+				title: ['Brittany Signature', ...defaultTheme.fontFamily.serif],
 			},
 			colors: {
 				primary: 'var(--color-primary)',

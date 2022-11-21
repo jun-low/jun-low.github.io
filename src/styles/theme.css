@@ -1,9 +1,9 @@
 [data-theme='light'] {
-	--color-primary: theme('colors.rose.400');
+	--color-primary: #8f5d46;
 	--color-secondary: theme('colors.orange.800');
-	--color-text: theme('colors.slate.900');
+	--color-text: #35375e;
 	--color-text-offset: theme('colors.slate.600');
-	--color-background: theme('colors.slate.50');
+	--color-background: #f1eee9;
 	--color-background-offset: theme('colors.slate.100');
 	--color-border: theme('colors.slate.900' / 10%);
 }
