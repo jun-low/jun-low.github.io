@@ -43,10 +43,12 @@ const features: Array<FeatureItem> = [
 ];
 ---
 
-<ContentSection title="Skills & Proficiencies" id="features">
-	<Fragment slot="lead">
-		My <span class="text-primary">Skills</span>.
-	</Fragment>
+<section id="features" class="flex flex-col items-center gap-4 space-y-8 scroll-mt-24">
+	<div class="flex flex-col items-center gap-4">
+		<h2 class="text-6xl font-title font-extrabold tracking-tight text-center gradient-text">
+			Skills & Proficiencies
+		</h2>
+	</div>
 	<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 		{
 			features.map(({ title, description, icon }) => (
@@ -60,4 +62,5 @@ const features: Array<FeatureItem> = [
 			))
 		}
 	</ul>
-</ContentSection>
+	<slot />
+</section>

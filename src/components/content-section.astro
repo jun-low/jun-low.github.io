@@ -6,14 +6,17 @@ export interface Props {
 const { title, id } = Astro.props;
 ---
 
-<section id={id} class="flex flex-col items-center gap-4 space-y-8 scroll-mt-24">
-	<div class="flex flex-col items-center gap-4">
+<section
+	id={id}
+	class="relative grid gap-12 h-full sm:grid-cols-2 place-items-start space-y-8 scroll-mt-24"
+>
+	<div class="flex flex-row items-center gap-4">
 		<slot name="eyebrow" />
-		<h2 class="text-6xl font-extrabold tracking-tight text-center gradient-text">
+		<h2 class="font-extrabold font-title tracking-tight text-center gradient-text">
 			{title}
 		</h2>
 	</div>
-	<p class="max-w-xl text-2xl font-extrabold text-center">
+	<p class="max-w-xl font-extrabold text-left">
 		<slot name="lead" />
 	</p>
 	<slot />
