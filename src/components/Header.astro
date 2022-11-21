@@ -13,9 +13,8 @@ const sizes = '100vw';
 	id="page-header"
 	class="absolute bottom-0 z-20 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
 >
-	<a class="flex items-center gap-3 hover:!text-default" href="#">
+	<a class="logo opacity-0 flex items-center gap-3 hover:!text-default" href="#">
 		<h1 class="sr-only">{SITE_TITLE}</h1>
-		<!-- <Icon name="logo" class="h-10" /> -->
 		<Picture
 			class="object-cover hidden h-16 sm:block"
 			src={logoImage}
@@ -110,5 +109,8 @@ const sizes = '100vw';
 	}
 	.modal.is-open {
 		@apply block;
+	}
+	:global(.fixed-header) .logo {
+		@apply opacity-100;
 	}
 </style>

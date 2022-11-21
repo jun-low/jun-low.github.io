@@ -13,8 +13,8 @@ const sizes = '(min-width: 640px) 42vw, 67vw';
 	<div id="splash-bg-fallback" class="absolute inset-0 opacity-40">
 		<HeroImage />
 	</div>
-	<div class="relative grid gap-12 h-full sm:grid-cols-2 place-items-center">
-		<div class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end">
+	<div class="relative grid gap-12 h-full place-items-center">
+		<div class="flex flex-col">
 			<h1 class="font-display font-regular tracking-tighter text-left text-8xl">
 				Hello, <br /> I'm Jun Low
 			</h1>
@@ -42,18 +42,6 @@ const sizes = '(min-width: 640px) 42vw, 67vw';
 				</HeaderLink>
 			</div>
 		</div>
-		<div
-			id="profile-image-container"
-			class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start"
-		>
-			<Picture
-				class="object-cover w-60 h-60"
-				src={junImage}
-				widths={widths}
-				sizes={sizes}
-				alt="A profile-image-container of jun"
-			/>
-		</div>
 	</div>
 </section>
 
@@ -64,43 +52,3 @@ const sizes = '(min-width: 640px) 42vw, 67vw';
 		}
 	</style>
 </noscript>
-
-<style>
-	@keyframes blob {
-		0% {
-			border-radius: 50% 32% 20% 70% / 60% 40% 55% 40%;
-		}
-
-		25% {
-			border-radius: 40% 57% 40% 81% / 84% 76% 45% 38%;
-		}
-
-		50% {
-			border-radius: 25% 68% 40% 46% / 59% 36% 45% 38%;
-		}
-
-		75% {
-			border-radius: 40% 27% 26% 58% / 70% 36% 64% 32%;
-		}
-
-		100% {
-			border-radius: 50% 32% 20% 70% / 60% 40% 55% 40%;
-		}
-	}
-	#profile-image-container img {
-		-webkit-animation: blob 2.5s linear infinite;
-		animation: blob 2.5s linear infinite;
-		border: 2px solid #617f93;
-	}
-	@media (prefers-reduced-motion: reduce) {
-		#profile-image-container {
-			@apply animate-none;
-		}
-		:global(#starfield) {
-			@apply hidden;
-		}
-		#splash-bg-fallback {
-			@apply block;
-		}
-	}
-</style>
