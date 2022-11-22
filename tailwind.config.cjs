@@ -8,7 +8,7 @@ module.exports = {
 			fontFamily: {
 				display: ['Lovelace-text', ...defaultTheme.fontFamily.serif],
 				sans: ['Bellefair Regular', ...defaultTheme.fontFamily.sans],
-				title: ['Brittany Signature', ...defaultTheme.fontFamily.serif],
+				title: ['Brittany Signature', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				primary: 'var(--color-primary)',

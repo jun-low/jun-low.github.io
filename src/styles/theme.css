@@ -1,7 +1,7 @@
 [data-theme='light'] {
 	--color-primary: #8f5d46;
 	--color-secondary: theme('colors.orange.800');
-	--color-text: #35375e;
+	--color-text: theme('colors.slate.900');
 	--color-text-offset: theme('colors.slate.600');
 	--color-background: #f1eee9;
 	--color-background-offset: theme('colors.slate.100');
@@ -9,9 +9,9 @@
 }
 
 [data-theme='dark'] {
-	--color-primary: theme('colors.rose.300');
+	--color-primary: #b9aa8d;
 	--color-secondary: theme('colors.orange.200');
-	--color-text: theme('colors.slate.50');
+	--color-text: #f1eee9;
 	--color-text-offset: theme('colors.slate.400');
 	--color-background: theme('colors.slate.900');
 	--color-background-offset: theme('colors.slate.800');
