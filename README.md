@@ -1,12 +1,5 @@
-# Personal Portfolio v2
+# Portfolio v2
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Functionality](#functionality)
-- [Project Structure](#projectstructure)
-- [Commands](#commands)
-- [Credit](#credit)
 
 ## 👋 Introduction
 
@@ -59,7 +52,7 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 #### Running in Development Mode
 
-Clone the repository before running in development mode: `git clone https://github.com/jun-low/portfolio.git`
+Clone the repository before running in development mode: `git clone git@github.com:jun-low/portfolio-v2.git`
 
 All commands are run from the root of the project, from a terminal:
 
