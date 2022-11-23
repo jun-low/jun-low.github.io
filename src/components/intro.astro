@@ -1,7 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
 import { Icon } from 'astro-icon';
-import junImage from '../assets/jun.jpg';
 import HeroImage from '@components/hero-image.astro';
 import HeaderLink from '@components/header-link.astro';
 
@@ -14,7 +12,7 @@ const sizes = '(min-width: 640px) 42vw, 67vw';
 		<HeroImage />
 	</div>
 	<div class="relative grid gap-12 h-full place-items-center">
-		<div class="flex flex-col">
+		<div class="flex flex-col px-14 md:px-0">
 			<h1 class="font-display font-regular tracking-tighter text-left text-8xl">
 				Hello, <br /> I'm Jun Low
 			</h1>
@@ -45,11 +43,3 @@ const sizes = '(min-width: 640px) 42vw, 67vw';
 		</div>
 	</div>
 </section>
-
-<noscript>
-	<style>
-		#splash-bg-fallback {
-			display: block;
-		}
-	</style>
-</noscript>

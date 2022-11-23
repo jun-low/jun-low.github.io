@@ -1,47 +1,65 @@
-# Astro Starter Kit: Blog
+# Personal Portfolio v2
 
-```
-npm create astro@latest -- --template blog
-```
+## Table of Contents
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+- [Introduction](#introduction)
+- [Functionality](#functionality)
+- [Project Structure](#projectstructure)
+- [Commands](#commands)
+- [Credit](#credit)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 👋 Introduction
 
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
+This is the repository for my portfolio (version 2). I have created this portfolio with [create-astro](https://astro.build/) and published it to Github Pages. A live demo can be viewed here [here](https://jun-low.github.io/).
+
+## 🧑‍🚀 Functionality
+
+All functionality has been built of November 23rd, 2022. I have plans to add more micro-interactions and projects in the future, such as improving a11y, adding parallax scrolling for mobile, and adding more intro page transitions.
 
 Features:
 
-- ✅ Minimal styling (make it your own!)
+- ✅ Tailwind CSS for styling
+- ✅ Themeable Dark mode
 - ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ SEO-friendly with canonical URLs
+- ✅ OpenGraph data for social media sharing
 - ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- ✅ Responsive support (layout, images, typography)
+- ✅ [Astro Prettier](https://github.com/withastro/prettier-plugin-astro) setup
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of the Astro project, you'll see the following folders and files:
 
-```
+```bash
 ├── public/
 ├── src/
-│   ├── components/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── assets/ # Images for the website
+│   ├── components/ # File used for DOM rendering
+│   ├── icons/ # Icons for the website
+│   ├── layouts/ # Shared layout for the website
+│   └── pages/ # Main page
+│   └── styles/ # Theme css with light and dark mode
+├── .prettierrc.json # Lint styles config file
+├── astro.config.mjs # Astro config tools file
+├── package-lock.json # Npm package manager file
+├── package.json # Npm package manager file
+├── README.md - This file.
+├── tailwind.config.cjs # Tailwind config file
+└── tsconfig.json # Typescript config
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro looks for `.astro` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
 Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
+
+#### Running in Development Mode
+
+Clone the repository before running in development mode: `git clone https://github.com/jun-low/portfolio.git`
 
 All commands are run from the root of the project, from a terminal:
 
@@ -54,10 +72,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## ✍️ Credit
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/) and [Astro Moon Landing](https://github.com/mhyfritz/astro-landing-page).

@@ -4,14 +4,14 @@ import HeaderLink from '@components/header-link.astro';
 import ThemeSwitcher from '@components/theme-switcher.astro';
 import { SITE_TITLE } from '../config';
 import { Picture } from '@astrojs/image/components';
-import logoImage from '../assets/logo.png';
+import logoImage from '/public/logo.png';
 const widths = [450, 800, 1200];
 const sizes = '100vw';
 ---
 
 <header
 	id="page-header"
-	class="absolute bottom-0 z-20 flex items-center justify-between w-full px-16 py-4 border-b border-transparent"
+	class="absolute bottom-0 z-20 flex items-center justify-between w-full px-12 md:px-16 py-4 border-b border-transparent"
 >
 	<a class="logo opacity-0 flex items-center gap-3 hover:!text-default" href="#">
 		<h1 class="sr-only">{SITE_TITLE}</h1>
@@ -94,14 +94,6 @@ const sizes = '100vw';
 		}
 	});
 </script>
-
-<noscript>
-	<style>
-		#open-nav-button {
-			display: none;
-		}
-	</style>
-</noscript>
 
 <style>
 	.fixed-header {

@@ -32,13 +32,13 @@
 
 /* fallback for IE */
 .gradient-text {
-  @apply text-primary
+	@apply text-primary;
 }
 /* gradient text for modern browsers */
 @supports (background-clip: text) {
-  .gradient-text {
+	.gradient-text {
 		@apply text-transparent bg-clip-text;
 		/* @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500; */
 		@apply bg-gradient-to-br from-[#8f5d46] via-[#b9aa8d] to-[#5C8271];
-  }
+	}
 }
