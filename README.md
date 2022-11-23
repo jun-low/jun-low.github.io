@@ -1,6 +1,5 @@
 # Portfolio v2
 
-
 ## 👋 Introduction
 
 This is the repository for my portfolio (version 2). I have created this portfolio with [create-astro](https://astro.build/) and published it to Github Pages. A live demo can be viewed here [here](https://jun-low.github.io/).
