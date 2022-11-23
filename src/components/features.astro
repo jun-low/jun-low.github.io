@@ -1,38 +1,37 @@
 ---
 import { Icon } from 'astro-icon';
-import ContentSection from '@components/content-section.astro';
 import type { FeatureItem } from '../types';
 
 const features: Array<FeatureItem> = [
 	{
 		title: 'Front-end',
 		description: 'JavaScript, Typescript, HTML, Sass, Bootstrap, Tailwind',
-		icon: 'mdi:handshake',
+		icon: 'tabler:browser',
 	},
 	{
 		title: 'Back-end',
 		description: 'Ruby on Rails, NodeJS',
-		icon: 'mdi:feather',
+		icon: 'tabler:code',
 	},
 	{
 		title: 'Version Control',
 		description: 'Git, Github, Bitbucket',
-		icon: 'mdi:account-group',
+		icon: 'tabler:git-merge',
 	},
 	{
 		title: 'Project Management',
 		description: 'JIRA, Trello, Github Kanban, Notion',
-		icon: 'mdi:directions-fork',
+		icon: 'tabler:rocket',
 	},
 	{
 		title: 'Product Design',
 		description: 'Figma, Adobe XD, Lucidchart, Canva',
-		icon: 'mdi:graph',
+		icon: 'tabler:brush',
 	},
 	{
 		title: 'Softskills',
 		description: 'Teamwork, Curiosity and continuous learning, Humour, Time Management',
-		icon: 'mdi:search-web',
+		icon: 'tabler:mood-happy',
 	},
 ];
 ---
@@ -47,7 +46,7 @@ const features: Array<FeatureItem> = [
 		{
 			features.map(({ title, description, icon }) => (
 				<li class="flex flex-col items-center gap-4 m-4 p-6 border rounded-3xl border-default bg-offset">
-					<div class="w-16 h-16 p-3 border-2 border-current rounded-full">
+					<div class="w-16 h-16 p-3 border-current rounded-full">
 						<Icon name={icon} />
 					</div>
 					<p class="text-xl font-display font-normal text-center">{title}</p>
