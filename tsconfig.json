@@ -4,8 +4,8 @@
 		"baseUrl": ".",
 		"paths": {
 			//  import aliases
-			"@components/*": ["src/components/*"],
-			"@layouts/*": ["src/layouts/*"]
+			"@components/*": ["/src/components/*"],
+			"@layouts/*": ["/src/layouts/*"]
 		},
 		"types": ["@astrojs/image/client"]
 	}
