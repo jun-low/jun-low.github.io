@@ -1,12 +1,13 @@
 {
 	"name": "jun-low-portfolio",
+	"description": "Jun Low portfolio website using Astro + Tailwind CSS.",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build && npx tailwindcss -o dist/build.css --minify ",
+		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"format": "prettier --write ."
@@ -28,5 +29,8 @@
 		"prettier": "2.7.1",
 		"prettier-plugin-astro": "^0.7.0",
 		"tailwindcss-fluid-type": "^2.0.3"
+	},
+	"engines": {
+		"node": "^14.15.0 || >=16.18.1"
 	}
 }
