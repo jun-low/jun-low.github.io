@@ -4,33 +4,33 @@ import type { FeatureItem } from '../types';
 
 const features: Array<FeatureItem> = [
 	{
-		title: 'Front-end',
-		description: 'JavaScript, Typescript, Angular, Vue.js, HTML, Sass, Bootstrap, Tailwind CSS',
+		title: 'Frontend',
+		description: 'JavaScript \n Typescript \n Angular \n VueJS \n HTML, CSS \n Bootstrap, Tailwind CSS \n Cypress, Jest, Vitest',
 		icon: 'tabler:browser',
 	},
 	{
-		title: 'Back-end',
-		description: 'Ruby on Rails, NodeJS',
+		title: 'Backend',
+		description: 'Ruby on Rails \n NodeJS \n MongoDB \n PostgreSQL \n REST APIs',
 		icon: 'tabler:code',
 	},
 	{
 		title: 'Version Control',
-		description: 'Git, Github, Bitbucket',
+		description: 'Git \n Github \n Bitbucket \n CI/CD \n Docker',
 		icon: 'tabler:git-merge',
 	},
 	{
 		title: 'Project Management',
-		description: 'JIRA, Trello, Github Kanban, Notion',
+		description: 'JIRA \n Trello \n GitHub project \n Notion',
 		icon: 'tabler:rocket',
 	},
 	{
-		title: 'Product Design',
-		description: 'Figma, Adobe XD, Lucidchart, Canva',
+		title: 'UI/UX Design',
+		description: 'Figma \n Adobe XD \n Design Systems \n Wireframing \n Prototyping',
 		icon: 'tabler:brush',
 	},
 	{
-		title: 'Softskills',
-		description: 'Teamwork, Curiosity and continuous learning, Humour, Time Management',
+		title: 'Soft Skills',
+		description: 'Self-starter and great problem solver \n Effective communication \n Analytical thinker and action-oriented \n Quick and eager learner \n Empathetic teamwork collaborator',
 		icon: 'tabler:mood-happy',
 	},
 ];
@@ -50,7 +50,7 @@ const features: Array<FeatureItem> = [
 						<Icon name={icon} />
 					</div>
 					<p class="text-xl font-display font-normal text-center">{title}</p>
-					<p class="text-sm text-center text-offset">{description}</p>
+					<p class="text-base text-center text-offset whitespace-pre-line">{description}</p>
 				</li>
 			))
 		}
