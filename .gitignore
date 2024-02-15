@@ -20,3 +20,5 @@ pnpm-debug.log*
 
 .prettierignore
 .vscode
+.trunk
+.github
