@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon';
 import type { FooterLink } from '../types';
-const today = new Date();
+import CopyrightYear from './CopyrightYear';
+
 const links: Array<FooterLink> = [
 	{
 		url: 'mailto:zhijun.low@gmail.com',
@@ -29,6 +30,7 @@ const links: Array<FooterLink> = [
 		icon: 'platforms/twitter-x',
 	},
 ];
+
 ---
 
 <footer class="relative py-10">
@@ -48,6 +50,13 @@ const links: Array<FooterLink> = [
 		}
 	</ul>
 	<p class="text-xs text-center italic">
-		&copy; {today.getFullYear()} Jun Low. All rights reserved.
+		&copy; <span id="copyright-year"></span> Jun Low. All rights reserved.
 	</p>
 </footer>
+
+<script>
+	const yearElement = document.getElementById('copyright-year');
+	if (yearElement) {
+	  yearElement.textContent = new Date().getFullYear().toString();
+	}
+  </script>
